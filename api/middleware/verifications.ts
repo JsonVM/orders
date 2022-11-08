@@ -4,7 +4,6 @@ import { verificationCenter } from "../shared/consts";
 const verifyAuth = async (req: Request, res: Response, next: any): Promise<any> => {
     if (!verificationCenter.verifyAuth.verify(req.body)) {
         if (!verifyBruteForce(req, res, next)) {
-            console.log("verifyautho its gonna fail")
             res.status(404).send({ok:false, message:"bad credentials"})
         }
         

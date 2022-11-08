@@ -8,7 +8,7 @@ import { User } from "./user.interface";
 import { verificationCenter } from "../shared/consts";
 import { verifications } from "../middleware/verifications";
 
-
+// aqui se aplican los middlewares definidos
 userRouter.post(
   "/doLogin",
   verifications,

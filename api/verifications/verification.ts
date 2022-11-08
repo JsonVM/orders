@@ -42,7 +42,7 @@ export class VerifyCache extends Verification {
 
     constructor() {
         super();
-        this.myCache = new NodeCache({ stdTTL: 10 });
+        this.myCache = new NodeCache({ stdTTL: 5 });
     }
     verify(): boolean | any {
         return this.myCache.has("result");
